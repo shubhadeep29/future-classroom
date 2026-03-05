@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post | Future Classroom</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .post-detail-section {
+            padding: 150px 0 100px; /* Extra padding for navbar */
+            background-color: var(--white);
+        }
+        .post-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        .post-header h1 {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        .post-meta-detail {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+        .post-meta-detail i {
+            color: var(--primary-orange);
+            margin-right: 8px;
+        }
+        .post-hero-image {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-bottom: 50px;
+            max-height: 500px;
+            object-fit: cover;
+            box-shadow: var(--shadow-md);
+        }
+        .post-body {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+        .post-body p {
+            margin-bottom: 25px;
+        }
+        .post-body h2 {
+            color: var(--primary-blue);
+            margin: 40px 0 20px;
+            font-size: 2rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-family: 'Outfit', sans-serif;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            color: var(--primary-orange);
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar scrolled">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html#home"><img src="images/logo.png" alt="Future Classroom Logo" class="logo-img"></a>
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#courses" class="nav-link">Courses</a>
+                <a href="index.html#posts" class="nav-link active">Updates</a>
+                <a href="index.html#contact" class="nav-link btn btn-outline">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Post Detail Section -->
+    <section class="post-detail-section">
+        <div class="container">
+            <div class="post-header">
+                <a href="index.html#posts" class="back-link"><i class="fas fa-arrow-left"></i> Back to Updates</a>
+                <h1>NEP 2020: Why Coding is Now Essential for School Students</h1>
+                <div class="post-meta-detail">
+                    <span><i class="far fa-calendar-alt"></i> March 1, 2026</span>
+                    <span><i class="far fa-user"></i> Admin</span>
+                    <span><i class="fas fa-tag"></i> News</span>
+                </div>
+            </div>
+            
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop" alt="Students learning coding" class="post-hero-image">
+            
+            <div class="post-body">
+                <p>The National Education Policy (NEP) 2020 has brought a massive paradigm shift in how education is approached in India. Moving away from rote memorization, the policy places a heavy emphasis on 21st-century skills, critical thinking, and digital literacy. One of the most talked-about mandates of this policy is the introduction of coding and computational thinking for school students.</p>
+                
+                <h2>Building a Foundation Early</h2>
+                <p>Starting to learn programming at a young age allows students to absorb the core concepts of logic and problem-solving much faster. At Future Classroom, we have designed a curriculum completely tailored to school students, ensuring that learning to code isn't just about syntax, but about solving real-world problems creatively.</p>
+                
+                <h2>Why It Matters Now More Than Ever</h2>
+                <p>As the digital landscape evolves rapidly with advancements in AI, machine learning, and automation, digital literacy is no longer just a specialized skill reserved for engineers—it is a fundamental life skill. Understanding how technology works beneath the surface helps students become active creators rather than passive consumers.</p>
+                
+                <div class="text-center mt-3">
+                    <a href="index.html#contact" class="btn btn-primary btn-large">Join Our Coding Classes Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <a href="index.html#home"><img src="images/logo.png" alt="Future Classroom Logo" class="footer-logo-img"></a>
+                </div>
+                <p>Computer & Coaching Center</p>
+            </div>
+            <div class="footer-details">
+                <p><i class="fas fa-map-marker-alt"></i> Gupta Para, Kaliyaganj, West Bengal, India</p>
+                <p><i class="fas fa-phone-alt"></i> <a href="tel:7003354703">+91 7003354703</a></p>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/917003354703" target="_blank">+91 7003354703</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Future Classroom. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/917003354703" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Minimal JavaScript -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const toggleBtn = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const isExpanded = navLinks.classList.contains('active');
+            toggleBtn.innerHTML = isExpanded ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+    </script>
+</body>
+</html>
