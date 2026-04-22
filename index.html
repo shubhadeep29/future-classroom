@@ -6,19 +6,22 @@
     <title>Future Classroom – Computer & Coaching Center | Kaliyaganj</title>
     <meta name="description" content="Future Classroom is a premier computer & coaching center in Kaliyaganj for students from Grade 5 to 12. We offer courses in Coding, MS Office, Graphic Design, and more.">
     <link rel="icon" type="image/png" href="images/logo.png">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" role="progressbar" aria-label="Page scroll progress"></div>
+
     <!-- Navigation -->
     <header class="navbar">
         <div class="container nav-container">
@@ -39,6 +42,9 @@
         </div>
     </header>
 
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
@@ -52,23 +58,44 @@
                 <a href="tel:7003354703" class="btn btn-primary btn-large"><i class="fas fa-phone-alt"></i> Call Now</a>
                 <a href="https://wa.me/917003354703" class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
             </div>
-            <p class="demo-text">⭐ Future Classroom offers <strong>BRIGHT FUTURE</strong> for your child!</p>
+            <p class="demo-text">
+                <span class="demo-badge">
+                    <i class="fas fa-star"></i>
+                    Future Classroom offers <strong>BRIGHT FUTURE</strong> for your child!
+                </span>
+            </p>
         </div>
     </section>
 
+    <!-- Wave divider: hero → trust-strip -->
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
     <section class="trust-strip" aria-label="Local highlights">
-        <div class="container trust-strip-content">
+        <div class="container trust-strip-content reveal-group">
             <div class="trust-item">
-                <i class="fas fa-school"></i>
-                <span>Kaliyaganj Based Learning Center</span>
+                <div class="trust-icon-wrap"><i class="fas fa-school"></i></div>
+                <div class="trust-text">
+                    <strong class="trust-stat">Kaliyaganj</strong>
+                    <span>Based Learning Center</span>
+                </div>
             </div>
             <div class="trust-item">
-                <i class="fas fa-book-open-reader"></i>
-                <span>NEP 2020 Friendly Skill Curriculum</span>
+                <div class="trust-icon-wrap"><i class="fas fa-book-open-reader"></i></div>
+                <div class="trust-text">
+                    <strong class="trust-stat">NEP 2020</strong>
+                    <span>Friendly Skill Curriculum</span>
+                </div>
             </div>
             <div class="trust-item">
-                <i class="fas fa-rupee-sign"></i>
-                <span>Affordable Fees with Small Batches</span>
+                <div class="trust-icon-wrap"><i class="fas fa-rupee-sign"></i></div>
+                <div class="trust-text">
+                    <strong class="trust-stat">Small Batches</strong>
+                    <span>Affordable &amp; Personal</span>
+                </div>
             </div>
         </div>
     </section>
@@ -76,7 +103,7 @@
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
-            <div class="about-card">
+            <div class="about-card reveal reveal--scale">
                 <div class="about-icon"><i class="fas fa-bullseye"></i></div>
                 <h2>Our Mission</h2>
                 <p>At <strong>Future Classroom</strong>, our mission is to empower school students by building robust computer skills and digital confidence. We believe that technology education is no longer a luxury, but a necessity. By providing top-tier, practical education in an engaging environment, we help students transition from tech consumers to tech creators, setting a strong foundation for their future academic and professional endeavors.</p>
@@ -85,45 +112,53 @@
         </div>
     </section>
 
+    <!-- Wave divider: about → why-us -->
+    <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0,30 C480,70 960,0 1440,30 L1440,60 L0,60 Z" fill="#f0f4fa"/>
+        </svg>
+    </div>
+
     <!-- Why Choose Us Section -->
     <section id="why-us" class="section why-us-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">What Sets Us Apart</span>
                 <h2>Why Choose <span class="highlight-text">Future Classroom?</span></h2>
                 <p>We provide a premium, trust-building learning experience focused on your child's real-world success.</p>
             </div>
-            
-            <div class="why-us-grid">
+
+            <div class="why-us-grid reveal-group">
                 <div class="reason-card">
                     <div class="reason-icon"><i class="fas fa-users"></i></div>
                     <h4>Small Batch Sizes</h4>
                     <p>Fewer students per class to ensure everyone participates actively and learns comfortably.</p>
                 </div>
-                
+
                 <div class="reason-card">
                     <div class="reason-icon"><i class="fas fa-hand-holding-heart"></i></div>
                     <h4>Personal Attention</h4>
                     <p>Each student's doubts are cleared instantly. We pace our sessions to match individual learning speeds.</p>
                 </div>
-                
+
                 <div class="reason-card">
                     <div class="reason-icon"><i class="fas fa-laptop-code"></i></div>
                     <h4>Practical Learning</h4>
                     <p>Moving beyond theory to prioritize hands-on typing, coding, and design implementations.</p>
                 </div>
-                
+
                 <div class="reason-card">
                     <div class="reason-icon"><i class="fas fa-smile-beam"></i></div>
                     <h4>Beginner-Friendly</h4>
                     <p>Zero technical background required. We start right from the very basics to build solid foundations.</p>
                 </div>
-                
+
                 <div class="reason-card">
                     <div class="reason-icon"><i class="fas fa-project-diagram"></i></div>
                     <h4>Project-Based Learning</h4>
                     <p>Students build actual projects and portfolios rather than just memorizing code.</p>
                 </div>
-                
+
                 <div class="reason-card">
                     <div class="reason-icon"><i class="fas fa-chart-line"></i></div>
                     <h4>Regular Progress Tracking</h4>
@@ -136,51 +171,52 @@
     <!-- Courses Section -->
     <section id="courses" class="section courses-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Courses We Offer</span>
                 <h2>Our <span class="highlight-text">Courses</span></h2>
                 <p>Future-ready skills tailored for school students to excel in academics and beyond.</p>
             </div>
-            
-            <div class="course-grid">
+
+            <div class="course-grid reveal-group">
                 <!-- Course 1 -->
                 <div class="course-card">
                     <div class="course-icon"><i class="fas fa-desktop"></i></div>
                     <h3>Basic Computer Skills</h3>
                     <p>Fundamentals of operating a computer, internet browsing, file management, and touch typing.</p>
                 </div>
-                
+
                 <!-- Course 2 -->
                 <div class="course-card">
                     <div class="course-icon"><i class="fas fa-code"></i></div>
                     <h3>Coding (Programming)</h3>
                     <p>Learn core logic and programming languages including Python, Java, JavaScript, and HTML.</p>
                 </div>
-                
+
                 <!-- Course 3 -->
                 <div class="course-card">
                     <div class="course-icon"><i class="fas fa-file-word"></i></div>
                     <h3>MS Office Mastery</h3>
                     <p>Comprehensive training on Microsoft Word, Excel, and PowerPoint for academic proficiency.</p>
                 </div>
-                
+
                 <!-- Course 4 -->
                 <div class="course-card">
                     <div class="course-icon"><i class="fas fa-paint-brush"></i></div>
                     <h3>Graphic Design</h3>
                     <p>Creative design principles using modern tools like Canva and Adobe Photoshop Basics.</p>
                 </div>
-                
+
                 <!-- Course 5 -->
                 <div class="course-card">
                     <div class="course-icon"><i class="fas fa-project-diagram"></i></div>
                     <h3>School Project Assist</h3>
                     <p>Expert guidance and assistance for school computer assignments and technical projects.</p>
                 </div>
-                
+
                 <!-- Course 6 -->
                 <div class="course-card">
                     <div class="course-icon"><i class="fas fa-robot"></i></div>
-                    <h3>AI Basics & Digital Skills</h3>
+                    <h3>AI Basics &amp; Digital Skills</h3>
                     <p>Introduction to Artificial Intelligence, prompt engineering, and modern digital literacy.</p>
                 </div>
             </div>
@@ -190,12 +226,13 @@
     <!-- Coding Classes Program Section -->
     <section id="coding-program" class="section coding-program">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Age-Group Program</span>
                 <h2>Coding Classes <span class="highlight-text">Program</span></h2>
                 <p>A structured approach tailored to every age group. Give your child the edge they need for the future.</p>
             </div>
-            
-            <div class="program-grid">
+
+            <div class="program-grid reveal-group">
                 <!-- Program 1 -->
                 <div class="program-card">
                     <div class="program-header">
@@ -208,7 +245,7 @@
                         <li><i class="fas fa-check"></i> Focus on fun and creativity</li>
                     </ul>
                 </div>
-                
+
                 <!-- Program 2 -->
                 <div class="program-card">
                     <div class="program-header">
@@ -221,7 +258,7 @@
                         <li><i class="fas fa-check"></i> Small projects</li>
                     </ul>
                 </div>
-                
+
                 <!-- Program 3 -->
                 <div class="program-card">
                     <div class="program-header">
@@ -235,7 +272,7 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="program-features">
                 <span class="feature-tag"><i class="far fa-calendar-alt"></i> Weekly 1 class</span>
                 <span class="feature-tag"><i class="fas fa-project-diagram"></i> Project-based learning</span>
@@ -246,12 +283,12 @@
     <!-- School Tuition Support Section -->
     <section id="tuition-support" class="section tuition-support">
         <div class="container tuition-container">
-            <div class="tuition-content">
+            <div class="tuition-content reveal reveal--left">
                 <div class="section-header align-left">
                     <h2>School Tuition <span class="highlight-text">Support</span></h2>
                     <p>Reliable and tailored academic support designed to help your child excel in all subjects.</p>
                 </div>
-                
+
                 <ul class="tuition-list">
                     <li>
                         <div class="tuition-icon"><i class="fas fa-home"></i></div>
@@ -283,7 +320,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="tuition-image">
+            <div class="tuition-image reveal reveal--right">
                 <div class="tuition-card-promo">
                     <i class="fas fa-hands-helping"></i>
                     <h3>Partnering in Your Child's Success</h3>
@@ -297,13 +334,13 @@
     <section id="instructor" class="section instructor-section">
         <div class="container">
             <div class="instructor-wrapper">
-                <div class="instructor-image">
-                    <!-- Profile Image Placeholder -->
+                <div class="instructor-image reveal reveal--left">
                     <div class="image-placeholder">
                         <i class="fas fa-user-tie"></i>
+                        <span class="placeholder-label">Shubhadeep C.</span>
                     </div>
                 </div>
-                <div class="instructor-content">
+                <div class="instructor-content reveal reveal--right">
                     <div class="section-header align-left mb-0">
                         <h2>About the <span class="highlight-text">Instructor</span></h2>
                     </div>
@@ -317,7 +354,7 @@
                         <span class="skill-tag"><i class="fab fa-js"></i> Web Development</span>
                         <span class="skill-tag"><i class="fas fa-desktop"></i> Desktop Application Development </span>
                         <span class="skill-tag"><i class="fas fa-gamepad"></i> Game Development </span>
-                        <span class="skill-tag"><i class="fas fa-robot"></i> AI & Machine Learning </span>
+                        <span class="skill-tag"><i class="fas fa-robot"></i> AI &amp; Machine Learning </span>
                     </div>
                 </div>
             </div>
@@ -327,12 +364,13 @@
     <!-- Testimonial Section -->
     <section id="testimonials" class="section testimonial-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Parent Reviews</span>
                 <h2>What Parents <span class="highlight-text">Say</span></h2>
                 <p>Join the many students already enrolled and see how Future Classroom is transforming their learning journey.</p>
             </div>
-            
-            <div class="testimonial-grid">
+
+            <div class="testimonial-grid reveal-group">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
                     <div class="testimonial-quote">
@@ -366,20 +404,42 @@
         </div>
     </section>
 
+    <!-- Pre-Footer CTA Banner -->
+    <section class="cta-banner reveal">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-text">
+                    <h2>Ready to Give Your Child a Head Start?</h2>
+                    <p>Join our next batch. Limited seats available for Class 3–12.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="tel:7003354703" class="btn btn-primary btn-large">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/917003354703" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Posts / Updates Section -->
     <section id="posts" class="section posts-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">News &amp; Announcements</span>
                 <h2>Latest <span class="highlight-text">Updates</span></h2>
                 <p>Stay informed with news, resources, and updates relevant to computer education.</p>
             </div>
-            
-            <div class="slider-wrapper" id="posts-slider-wrapper">
+        </div>
+
+        <div class="slider-wrapper" id="posts-slider-wrapper">
                 <button class="slider-btn prev-btn" id="slider-prev" aria-label="Previous posts"><i class="fas fa-chevron-left"></i></button>
-                
+
                 <div class="slider-container" id="slider-container">
                     <div class="slider-track" id="slider-track">
-                        
+
                         <!-- Post 1: New Coding Batch -->
                         <article class="post-card slider-slide">
                             <div class="post-image">
@@ -392,7 +452,7 @@
                                     <span><i class="far fa-user"></i> Admin</span>
                                 </div>
                                 <h3>🚀 New Coding Batch Starting from May</h3>
-                                
+
                                 <div class="post-body">
                                     <div class="post-text-short">
                                         <p>Admissions are now open for our Coding Classes (Class 3–12) starting this May. 🎯 Limited seats available.</p>
@@ -414,7 +474,7 @@
                         </article>
 
                         <!-- Post 2: Free Demo Class -->
-                        <article class="post-card slider-slide">
+                        <!-- <article class="post-card slider-slide">
                             <div class="post-image">
                                 <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=900&auto=format&fit=crop" alt="Student participating">
                                 <span class="post-category">Events</span>
@@ -425,7 +485,7 @@
                                     <span><i class="far fa-user"></i> Admin</span>
                                 </div>
                                 <h3>🎯 Free Demo Class Before New Batch</h3>
-                                
+
                                 <div class="post-body">
                                     <div class="post-text-short">
                                         <p>We are conducting a FREE demo class before our new coding batch starts in May. Perfect for beginners from Class 3–12.</p>
@@ -444,7 +504,7 @@
                                 </div>
                                 <button class="read-more-toggle">Read More <i class="fas fa-chevron-down"></i></button>
                             </div>
-                        </article>
+                        </article> -->
 
                         <!-- Post 3 -->
                         <article class="post-card slider-slide">
@@ -458,7 +518,7 @@
                                     <span><i class="far fa-user"></i> Admin</span>
                                 </div>
                                 <h3>NEP 2020: Why Coding is Now Essential</h3>
-                                
+
                                 <div class="post-body">
                                     <div class="post-text-short">
                                         <p>With the new education policy emphasizing 21st-century skills, we break down why middle school is the perfect time...</p>
@@ -484,7 +544,7 @@
                                     <span><i class="far fa-user"></i> Admin</span>
                                 </div>
                                 <h3>Top 5 Free AI Tools Every Student Should Know</h3>
-                                
+
                                 <div class="post-body">
                                     <div class="post-text-short">
                                         <p>Discover how free artificial intelligence tools can help you safely research, brainstorm, and manage your school projects effectively.</p>
@@ -510,7 +570,7 @@
                                     <span><i class="far fa-user"></i> Admin</span>
                                 </div>
                                 <h3>Computer Literacy Workshop</h3>
-                                
+
                                 <div class="post-body">
                                     <div class="post-text-short">
                                         <p>Join our free weekend workshop aimed at helping rural students grasp basic Windows and MS Office skills.</p>
@@ -526,22 +586,23 @@
 
                     </div>
                 </div>
-                
+
+                <button class="slider-btn next-btn" id="slider-next" aria-label="Next posts"><i class="fas fa-chevron-right"></i></button>
                 <div class="slider-dots" id="slider-dots"></div>
-            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal">
+                <span class="section-eyebrow">Get In Touch</span>
                 <h2>Get in <span class="highlight-text">Touch</span></h2>
                 <p>Ready to start your journey? Contact us for admission and inquiries.</p>
             </div>
-            
+
             <div class="contact-wrapper">
-                <div class="contact-info">
+                <div class="contact-info reveal reveal--left">
                     <div class="contact-card">
                         <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
                         <div class="contact-details">
@@ -550,7 +611,7 @@
                             <a href="tel:7003354703" class="contact-link">+91 7003354703</a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-card">
                         <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
                         <div class="contact-details">
@@ -559,7 +620,7 @@
                             <a href="https://wa.me/917003354703" class="contact-link" target="_blank">+91 7003354703</a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-card">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-details">
@@ -569,14 +630,14 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-map">
-                    <iframe 
+
+                <div class="contact-map reveal reveal--right">
+                    <iframe
                       src="https://www.google.com/maps?q=Computer+Science+Academy,+Kaliyaganj&output=embed"
-                      width="100%" 
-                      height="100%" 
-                      style="border:0;" 
-                      allowfullscreen="" 
+                      width="100%"
+                      height="100%"
+                      style="border:0;"
+                      allowfullscreen=""
                       loading="lazy">
                     </iframe>
                 </div>
@@ -592,7 +653,7 @@
                 <p><strong>Instructor:</strong> Shubhadeep Chowdhury</p>
                 <p>Empowering the next generation with future-ready digital skills.</p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -601,7 +662,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Contact Info</h3>
                 <ul class="footer-contact">
@@ -621,20 +682,18 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Minimal JavaScript -->
+    <!-- JavaScript -->
     <script>
         // --- Slider & Post Expanding Javascript ---
         (function() {
-            // Slider Logic
             const track = document.getElementById('slider-track');
             if(!track) return;
-            
+
             const slides = Array.from(track.children);
             const nextButton = document.getElementById('slider-next');
             const prevButton = document.getElementById('slider-prev');
             const dotsNav = document.getElementById('slider-dots');
             let currentSlideIndex = 0;
-            let slideInterval;
 
             const getVisibleSlides = () => window.innerWidth <= 768 ? 1 : 2;
 
@@ -642,18 +701,14 @@
                 dotsNav.innerHTML = '';
                 const visible = getVisibleSlides();
                 const dotCount = Math.max(1, slides.length - visible + 1);
-                
+
                 for (let i = 0; i < dotCount; i++) {
                     const dot = document.createElement('div');
                     dot.classList.add('slider-dot');
                     if (i === 0) dot.classList.add('active');
                     dot.dataset.index = i;
                     dotsNav.appendChild(dot);
-                    
-                    dot.addEventListener('click', e => {
-                        goToSlide(parseInt(e.target.dataset.index));
-                        resetInterval();
-                    });
+                    dot.addEventListener('click', e => goToSlide(parseInt(e.target.dataset.index)));
                 }
             };
 
@@ -666,84 +721,95 @@
             const goToSlide = (index) => {
                 const visible = getVisibleSlides();
                 const maxIndex = Math.max(0, slides.length - visible);
-                
+
                 if (index < 0) currentSlideIndex = maxIndex;
                 else if (index > maxIndex) currentSlideIndex = 0;
                 else currentSlideIndex = index;
-                
+
                 const slideWidth = slides[0].getBoundingClientRect().width;
                 const slideMargin = parseFloat(window.getComputedStyle(slides[0]).marginRight) || 0;
                 track.style.transform = `translateX(-${currentSlideIndex * (slideWidth + slideMargin)}px)`;
                 updateDots(currentSlideIndex);
             };
 
-            const startInterval = () => {
-                slideInterval = setInterval(() => { goToSlide(currentSlideIndex + 1); }, 5000);
-            };
-            const resetInterval = () => {
-                clearInterval(slideInterval);
-                startInterval();
-            };
-
-            nextButton.addEventListener('click', () => {
-                goToSlide(currentSlideIndex + 1);
-                resetInterval();
-            });
-            prevButton.addEventListener('click', () => {
-                goToSlide(currentSlideIndex - 1);
-                resetInterval();
-            });
-
-            const wrapper = document.getElementById('posts-slider-wrapper');
-            wrapper.addEventListener('mouseenter', () => clearInterval(slideInterval));
-            wrapper.addEventListener('mouseleave', startInterval);
+            nextButton.addEventListener('click', () => goToSlide(currentSlideIndex + 1));
+            prevButton.addEventListener('click', () => goToSlide(currentSlideIndex - 1));
 
             window.addEventListener('resize', () => {
                 setupDots();
-                goToSlide(currentSlideIndex); // Recalculate widths
+                goToSlide(currentSlideIndex);
             });
 
             setupDots();
-            startInterval();
 
-            // Read More Toggle Logic
-            const toggleButtons = document.querySelectorAll('.read-more-toggle');
-            toggleButtons.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const postBody = this.previousElementSibling;
-                    const shortText = postBody.querySelector('.post-text-short');
-                    const fullText = postBody.querySelector('.post-text-full');
-                    const isExpanded = this.classList.contains('expanded');
-                    
-                    if (isExpanded) {
-                        fullText.style.display = 'none';
-                        shortText.style.display = 'block';
-                        this.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
-                        this.classList.remove('expanded');
-                    } else {
-                        shortText.style.display = 'none';
-                        fullText.style.display = 'block';
-                        this.innerHTML = 'Show Less <i class="fas fa-chevron-up"></i>';
-                        this.classList.add('expanded');
-                        
-                        // Pause slider while reading
-                        clearInterval(slideInterval);
-                    }
-                });
-            });
         })();
+
+        // Read More / Show Less — document-level delegation so it works
+        // for every card regardless of slide position or clip-path state
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.read-more-toggle');
+            if (!btn) return;
+            const content = btn.closest('.post-content');
+            if (!content) return;
+            const short = content.querySelector('.post-text-short');
+            const full  = content.querySelector('.post-text-full');
+            const expanded = btn.dataset.expanded === 'true';
+            if (expanded) {
+                full.style.display  = 'none';
+                short.style.display = '';
+                btn.innerHTML       = 'Read More <i class="fas fa-chevron-down"></i>';
+                btn.dataset.expanded = 'false';
+                btn.classList.remove('expanded');
+            } else {
+                short.style.display = 'none';
+                full.style.display  = 'block';
+                btn.innerHTML       = 'Show Less <i class="fas fa-chevron-up"></i>';
+                btn.dataset.expanded = 'true';
+                btn.classList.add('expanded');
+            }
+        });
+
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Mobile menu toggle
+        // Mobile menu toggle with overlay
         const toggleBtn = document.getElementById('mobile-toggle');
         const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        function openMenu() {
+            navLinks.classList.add('active');
+            navOverlay.classList.add('active');
+            toggleBtn.innerHTML = '<i class="fas fa-times"></i>';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+            toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            document.body.style.overflow = '';
+        }
 
         toggleBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const isExpanded = navLinks.classList.contains('active');
-            toggleBtn.innerHTML = isExpanded ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            navLinks.classList.contains('active') ? closeMenu() : openMenu();
         });
+
+        navOverlay.addEventListener('click', closeMenu);
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(item => {
+            item.addEventListener('click', closeMenu);
+        });
+
+        // Scroll Progress Bar
+        const scrollProgressBar = document.getElementById('scroll-progress');
+        function updateScrollProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            scrollProgressBar.style.width = progress + '%';
+        }
 
         // Sticky Navbar and active link highlighting based on scroll
         const navbar = document.querySelector('.navbar');
@@ -751,18 +817,17 @@
         const navItems = document.querySelectorAll('.nav-link');
 
         window.addEventListener('scroll', () => {
-            // Navbar effect
+            updateScrollProgress();
+
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
 
-            // Highlights
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (pageYOffset >= (sectionTop - 200)) {
                     current = section.getAttribute('id');
                 }
@@ -770,19 +835,59 @@
 
             navItems.forEach(item => {
                 item.classList.remove('active');
-                if (item.getAttribute('href').includes(current)) {
+                if (item.getAttribute('href') && item.getAttribute('href').includes(current)) {
                     item.classList.add('active');
                 }
             });
         });
 
-        // Close mobile menu on link click
-        navItems.forEach(item => {
-            item.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
+        // Scroll Reveal — IntersectionObserver + scroll-event fallback
+        (function() {
+            const revealEls = Array.from(document.querySelectorAll('.reveal, .reveal-group'));
+            if (!revealEls.length) return;
+
+            function checkVisible(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight - 20 && rect.bottom > 0;
+            }
+
+            function revealVisible() {
+                let remaining = false;
+                revealEls.forEach(el => {
+                    if (!el.classList.contains('is-visible')) {
+                        if (checkVisible(el)) {
+                            el.classList.add('is-visible');
+                        } else {
+                            remaining = true;
+                        }
+                    }
+                });
+                // Once all revealed, remove the scroll listener
+                if (!remaining) window.removeEventListener('scroll', onScroll);
+            }
+
+            function onScroll() { revealVisible(); }
+
+            // Attach scroll fallback (passive, so no performance cost)
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            // Also use IntersectionObserver for smooth staggered entry
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+                revealEls.forEach(el => observer.observe(el));
+            }
+
+            // Initial check for anything already in view on load
+            requestAnimationFrame(revealVisible);
+        })();
     </script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -72,7 +72,7 @@
             margin-bottom: 30px;
             color: var(--primary-blue);
             font-weight: 600;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Manrope', sans-serif;
             transition: var(--transition);
         }
         .back-link:hover {
@@ -100,10 +100,13 @@
         </div>
     </header>
 
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
     <!-- Post Detail Section -->
     <section class="post-detail-section">
         <div class="container">
-            <div class="post-header">
+            <div class="post-header reveal">
                 <a href="index.html#posts" class="back-link"><i class="fas fa-arrow-left"></i> Back to Updates</a>
                 <h1>NEP 2020: Why Coding is Now Essential for School Students</h1>
                 <div class="post-meta-detail">
@@ -115,7 +118,7 @@
             
             <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop" alt="Students learning coding" class="post-hero-image">
             
-            <div class="post-body">
+            <div class="post-body reveal">
                 <p>The National Education Policy (NEP) 2020 has brought a massive paradigm shift in how education is approached in India. Moving away from rote memorization, the policy places a heavy emphasis on 21st-century skills, critical thinking, and digital literacy. One of the most talked-about mandates of this policy is the introduction of coding and computational thinking for school students.</p>
                 
                 <h2>Building a Foundation Early</h2>
@@ -171,14 +174,64 @@
     <!-- Minimal JavaScript -->
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
         const toggleBtn = document.getElementById('mobile-toggle');
         const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        function openMenu() {
+            navLinks.classList.add('active');
+            navOverlay.classList.add('active');
+            toggleBtn.innerHTML = '<i class="fas fa-times"></i>';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+            toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            document.body.style.overflow = '';
+        }
 
         toggleBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const isExpanded = navLinks.classList.contains('active');
-            toggleBtn.innerHTML = isExpanded ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            navLinks.classList.contains('active') ? closeMenu() : openMenu();
         });
+        navOverlay.addEventListener('click', closeMenu);
+
+        // Scroll Reveal — IntersectionObserver + scroll-event fallback
+        (function() {
+            const els = Array.from(document.querySelectorAll('.reveal, .reveal-group'));
+            if (!els.length) return;
+
+            function checkVisible(el) {
+                const rect = el.getBoundingClientRect();
+                return rect.top < window.innerHeight - 20 && rect.bottom > 0;
+            }
+
+            function revealVisible() {
+                let remaining = false;
+                els.forEach(el => {
+                    if (!el.classList.contains('is-visible')) {
+                        if (checkVisible(el)) { el.classList.add('is-visible'); }
+                        else { remaining = true; }
+                    }
+                });
+                if (!remaining) window.removeEventListener('scroll', onScroll);
+            }
+
+            function onScroll() { revealVisible(); }
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            if ('IntersectionObserver' in window) {
+                const obs = new IntersectionObserver((entries) => {
+                    entries.forEach(e => {
+                        if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+                    });
+                }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+                els.forEach(el => obs.observe(el));
+            }
+
+            requestAnimationFrame(revealVisible);
+        })();
     </script>
 </body>
 </html>
